@@ -1,0 +1,24 @@
+
+* create a project
+php -c conf bin\composer.phar create-project symfony/framework-standard-edition ./vendor/symfony2/ 
+
+* commit everything to an open repo
+
+* setup model for record(directoryEntry)
+
+* setup controller and route
+
+* setup directory, file and record->directory->zip
+
+
+Done
+
+* setup paths bin
+
+* install composer
+
+* use composer to install symfony2
+
+# install composer into bin directory using downloaded install script
+php bin\install-composer.php --install-dir bin
+
