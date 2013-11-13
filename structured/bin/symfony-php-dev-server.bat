@@ -12,8 +12,8 @@ set PATH=%PATH%;%cwd%\vendor\php
 REM change into app dir
 cd htdocs
 
-REM run php dev server on port 8000
-php -c ../conf/php.ini app/console server:run
+REM run php dev server on named port, enable debug settings for php (not in production php.ini)
+php -S localhost:8081 -c ../conf/php.ini -d register_argc_argv=On app/console server:run
 
 pause
 
