@@ -806,3 +806,42 @@ pm_winnt:notice] [pid 6908:tid 392] AH00354: Child: Starting 64 worker threads.
 [Fri Nov 08 06:08:21.176734 2013] [mpm_winnt:notice] [pid 1864:tid 380] AH00422: Parent: Received shutdown signal -- Shutting down the server.
 [Fri Nov 08 06:08:23.176849 2013] [mpm_winnt:notice] [pid 6908:tid 392] AH00364: Child: All worker threads have exited.
 [Fri Nov 08 06:08:23.192850 2013] [mpm_winnt:notice] [pid 1864:tid 380] AH00430: Parent: Child process 6908 exited successfully.
+[Wed Nov 13 18:17:41.635739 2013] [mpm_winnt:notice] [pid 9268:tid 380] AH00455: Apache/2.4.6 (Win32) PHP/5.5.5 configured -- resuming normal operations
+[Wed Nov 13 18:17:41.635739 2013] [mpm_winnt:notice] [pid 9268:tid 380] AH00456: Apache Lounge VC9 Server built: Jul 16 2013 11:47:30
+[Wed Nov 13 18:17:41.635739 2013] [core:notice] [pid 9268:tid 380] AH00094: Command line: 'bin\\httpd.exe -d C:/core/working/structuredfun/structured/vendor/Apache24 -f ..\\..\\conf\\httpd.conf'
+[Wed Nov 13 18:17:41.641740 2013] [mpm_winnt:notice] [pid 9268:tid 380] AH00418: Parent: Created child process 9388
+Apache server interrupted...
+013] [mpm_winnt:notice] [pid 9388:tid 392] AH00354: Child: Starting 64 worker threads.
+[Wed Nov 13 18:17:48.138111 2013] [:error] [pid 9388:tid 908] [client 127.0.0.1:57697] script 'C:/core/working/structuredfun/structured/htdocs/index.php' not found or unable to stat
+[Wed Nov 13 18:17:48.214115 2013] [:error] [pid 9388:tid 908] [client 127.0.0.1:57697] script 'C:/core/working/structuredfun/structured/htdocs/index.php' not found or unable to stat
+[Wed Nov 13 18:25:07.755371 2013] [:error] [pid 9388:tid 900] [client 127.0.0.1:57989] script 'C:/core/working/structuredfun/structured/htdocs/index.php' not found or unable to stat
+[Wed Nov 13 18:25:09.610106 2013] [:error] [pid 9388:tid 900] [client 127.0.0.1:57989] script 'C:/core/working/structuredfun/structured/htdocs/index.php' not found or unable to stat
+[Wed Nov 13 18:25:11.077292 2013] [:error] [pid 9388:tid 900] [client 127.0.0.1:57991] script 'C:/core/working/structuredfun/structured/htdocs/index.php' not found or unable to stat
+[Wed Nov 13 18:25:11.570843 2013] [:error] [pid 9388:tid 900] [client 127.0.0.1:57993] script 'C:/core/working/structuredfun/structured/htdocs/index.php' not found or unable to stat
+[Wed Nov 13 18:25:11.718852 2013] [:error] [pid 9388:tid 900] [client 127.0.0.1:57995] script 'C:/core/working/structuredfun/structured/htdocs/index.php' not found or unable to stat
+[Wed Nov 13 18:25:11.869860 2013] [:error] [pid 9388:tid 900] [client 127.0.0.1:57997] script 'C:/core/working/structuredfun/structured/htdocs/index.php' not found or unable to stat
+[Wed Nov 13 18:25:12.022869 2013] [:error] [pid 9388:tid 900] [client 127.0.0.1:57999] script 'C:/core/working/structuredfun/structured/htdocs/index.php' not found or unable to stat
+[Wed Nov 13 18:25:12.165877 2013] [:error] [pid 9388:tid 900] [client 127.0.0.1:58001] script 'C:/core/working/structuredfun/structured/htdocs/index.php' not found or unable to stat
+[Wed Nov 13 18:25:12.320886 2013] [:error] [pid 9388:tid 900] [client 127.0.0.1:58003] script 'C:/core/working/structuredfun/structured/htdocs/index.php' not found or unable to stat
+[Wed Nov 13 18:25:12.451894 2013] [:error] [pid 9388:tid 900] [client 127.0.0.1:58005] script 'C:/core/working/structuredfun/structured/htdocs/index.php' not found or unable to stat
+[Wed Nov 13 18:25:12.557900 2013] [:error] [pid 9388:tid 900] [client 127.0.0.1:58007] script 'C:/core/working/structuredfun/structured/htdocs/index.php' not found or unable to stat
+[Wed Nov 13 18:26:31.239668 2013] [mpm_winnt:notice] [pid 9268:tid 380] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Wed Nov 13 18:26:33.240782 2013] [mpm_winnt:notice] [pid 9388:tid 392] AH00364: Child: All worker threads have exited.
+[Wed Nov 13 18:26:33.268784 2013] [mpm_winnt:notice] [pid 9268:tid 380] AH00430: Parent: Child process 9388 exited successfully.
+[Wed Nov 13 18:26:41.864275 2013] [mpm_winnt:notice] [pid 11732:tid 380] AH00455: Apache/2.4.6 (Win32) PHP/5.5.5 configured -- resuming normal operations
+[Wed Nov 13 18:26:41.864275 2013] [mpm_winnt:notice] [pid 11732:tid 380] AH00456: Apache Lounge VC9 Server built: Jul 16 2013 11:47:30
+[Wed Nov 13 18:26:41.864275 2013] [core:notice] [pid 11732:tid 380] AH00094: Command line: 'bin\\httpd.exe -d C:/core/working/structuredfun/structured/vendor/Apache24 -f ..\\..\\conf\\httpd.conf'
+[Wed Nov 13 18:26:41.867276 2013] [mpm_winnt:notice] [pid 11732:tid 380] AH00418: Parent: Created child process 6780
+Apache server interrupted...
+013] [mpm_winnt:notice] [pid 6780:tid 392] AH00354: Child: Starting 64 worker threads.
+[Wed Nov 13 18:26:44.523428 2013] [:error] [pid 6780:tid 908] [client 127.0.0.1:58037] PHP Warning:  require_once(C:\\core\\working\\structuredfun\\structured\\htdocs\\web/../app/bootstrap.php.cache): failed to open stream: No such file or directory in C:\\core\\working\\structuredfun\\structured\\htdocs\\web\\app.php on line 6
+[Wed Nov 13 18:26:44.524428 2013] [:error] [pid 6780:tid 908] [client 127.0.0.1:58037] PHP Fatal error:  require_once(): Failed opening required 'C:\\core\\working\\structuredfun\\structured\\htdocs\\web/../app/bootstrap.php.cache' (include_path='.;C:\\php\\pear') in C:\\core\\working\\structuredfun\\structured\\htdocs\\web\\app.php on line 6
+[Wed Nov 13 18:26:49.738726 2013] [:error] [pid 6780:tid 908] [client 127.0.0.1:58039] PHP Warning:  require_once(C:\\core\\working\\structuredfun\\structured\\htdocs\\web/../app/bootstrap.php.cache): failed to open stream: No such file or directory in C:\\core\\working\\structuredfun\\structured\\htdocs\\web\\app.php on line 6
+[Wed Nov 13 18:26:49.739726 2013] [:error] [pid 6780:tid 908] [client 127.0.0.1:58039] PHP Fatal error:  require_once(): Failed opening required 'C:\\core\\working\\structuredfun\\structured\\htdocs\\web/../app/bootstrap.php.cache' (include_path='.;C:\\php\\pear') in C:\\core\\working\\structuredfun\\structured\\htdocs\\web\\app.php on line 6
+[Wed Nov 13 18:26:50.207753 2013] [:error] [pid 6780:tid 908] [client 127.0.0.1:58041] PHP Warning:  require_once(C:\\core\\working\\structuredfun\\structured\\htdocs\\web/../app/bootstrap.php.cache): failed to open stream: No such file or directory in C:\\core\\working\\structuredfun\\structured\\htdocs\\web\\app.php on line 6
+[Wed Nov 13 18:26:50.207753 2013] [:error] [pid 6780:tid 908] [client 127.0.0.1:58041] PHP Fatal error:  require_once(): Failed opening required 'C:\\core\\working\\structuredfun\\structured\\htdocs\\web/../app/bootstrap.php.cache' (include_path='.;C:\\php\\pear') in C:\\core\\working\\structuredfun\\structured\\htdocs\\web\\app.php on line 6
+[Wed Nov 13 18:26:50.435766 2013] [:error] [pid 6780:tid 908] [client 127.0.0.1:58043] PHP Warning:  require_once(C:\\core\\working\\structuredfun\\structured\\htdocs\\web/../app/bootstrap.php.cache): failed to open stream: No such file or directory in C:\\core\\working\\structuredfun\\structured\\htdocs\\web\\app.php on line 6
+[Wed Nov 13 18:26:50.435766 2013] [:error] [pid 6780:tid 908] [client 127.0.0.1:58043] PHP Fatal error:  require_once(): Failed opening required 'C:\\core\\working\\structuredfun\\structured\\htdocs\\web/../app/bootstrap.php.cache' (include_path='.;C:\\php\\pear') in C:\\core\\working\\structuredfun\\structured\\htdocs\\web\\app.php on line 6
+[Wed Nov 13 18:39:55.387465 2013] [mpm_winnt:notice] [pid 11732:tid 380] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Wed Nov 13 18:39:57.387579 2013] [mpm_winnt:notice] [pid 6780:tid 392] AH00364: Child: All worker threads have exited.
+[Wed Nov 13 18:39:57.406580 2013] [mpm_winnt:notice] [pid 11732:tid 380] AH00430: Parent: Child process 6780 exited successfully.
