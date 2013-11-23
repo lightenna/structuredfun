@@ -1,8 +1,10 @@
 
-* create a project
-php -c conf bin\composer.phar create-project symfony/framework-standard-edition ./vendor/symfony2/ 
+* test basic route on prod
 
-* commit everything to an open repo
+* create directory indexer like before
+  + but under symfony
+
+* setup php-dev server for dev if caching is annoying
 
 * setup model for record(directoryEntry)
 
@@ -21,4 +23,9 @@ Done
 
 # install composer into bin directory using downloaded install script
 php bin\install-composer.php --install-dir bin
+
+* create a project
+php -c conf bin\composer.phar create-project symfony/framework-standard-edition ./vendor/symfony2/ 
+
+* commit everything to an open repo
 

@@ -9,9 +9,12 @@ set cwd=%CD%
 REM setup php path
 set PATH=%PATH%;%cwd%\vendor\php
 
+REM this does work
+set PHPRC=%cwd%\conf
 REM this does not work
-REM have to use the -c
 REM set PHP_INI_PATH=%cwd%\conf
 
+REM change into the website root folder
+cd htdocs
 start cmd.exe
 
