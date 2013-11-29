@@ -1083,3 +1083,12 @@ Apache server interrupted...
 Apache server shutdown initiated...
 [Sat Nov 16 21:54:44.596086 2013] [mpm_winnt:notice] [pid 3732:tid 400] AH00364: Child: All worker threads have exited.
 [Sat Nov 16 21:54:44.620087 2013] [mpm_winnt:notice] [pid 6384:tid 188] AH00430: Parent: Child process 3732 exited successfully.
+[Fri Nov 29 19:38:27.106993 2013] [mpm_winnt:notice] [pid 8792:tid 388] AH00455: Apache/2.4.6 (Win32) PHP/5.5.5 configured -- resuming normal operations
+[Fri Nov 29 19:38:27.106993 2013] [mpm_winnt:notice] [pid 8792:tid 388] AH00456: Apache Lounge VC9 Server built: Jul 16 2013 11:47:30
+[Fri Nov 29 19:38:27.106993 2013] [core:notice] [pid 8792:tid 388] AH00094: Command line: 'bin\\httpd.exe -d Z:/github.com/structuredfun-pc/structured/vendor/Apache24 -f ..\\..\\conf\\httpd.conf'
+[Fri Nov 29 19:38:27.123994 2013] [mpm_winnt:notice] [pid 8792:tid 388] AH00418: Parent: Created child process 9196
+Apache server interrupted...
+013] [mpm_winnt:notice] [pid 9196:tid 400] AH00354: Child: Starting 64 worker threads.
+[Fri Nov 29 19:43:02.973810 2013] [mpm_winnt:notice] [pid 8792:tid 388] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Fri Nov 29 19:43:04.974925 2013] [mpm_winnt:notice] [pid 9196:tid 400] AH00364: Child: All worker threads have exited.
+[Fri Nov 29 19:43:05.030928 2013] [mpm_winnt:notice] [pid 8792:tid 388] AH00430: Parent: Child process 9196 exited successfully.
