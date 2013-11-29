@@ -1,2 +1,6 @@
+# ignore top-level folders during testing
 data
 debug
+
+# ignore log directories
+structured/vendor/Apache24/logs
