@@ -1,17 +1,6 @@
 
-* test basic route on prod
-
-* create directory indexer like before
-  + but under symfony
-
-* setup php-dev server for dev if caching is annoying
-
-* setup model for record(directoryEntry)
-
-* setup controller and route
-
-* setup directory, file and record->directory->zip
-
+* Started using Project sheet in Google drive
+https://docs.google.com/a/lightenna.com/spreadsheet/ccc?key=0AuXNj3kHNsfddFhwTGZpcERMd1JweTVuMEFoS3h6YUE&usp=drive_web#gid=0
 
 Done
 
@@ -28,4 +17,18 @@ php bin\install-composer.php --install-dir bin
 php -c conf bin\composer.phar create-project symfony/framework-standard-edition ./vendor/symfony2/ 
 
 * commit everything to an open repo
+
+* test basic route on prod
+
+* create directory indexer like before
+  + but under symfony
+
+* setup php-dev server for dev if caching is annoying
+  = didn't have to, configured normal apache to use app-dev
+
+* setup model for record(directoryEntry)
+
+* setup controller and route
+
+* setup directory, file and record->directory->zip
 
