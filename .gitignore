@@ -4,3 +4,6 @@ debug
 
 # ignore log directories
 structured/vendor/Apache24/logs
+
+# ignore mediacache
+structured/mediacache
