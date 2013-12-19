@@ -1,9 +1,13 @@
 # ignore top-level folders during testing
 data
 debug
+docs
 
 # ignore log directories
 structured/vendor/Apache24/logs
 
 # ignore mediacache
 structured/mediacache
+
+# ignore user-specific config
+structured/conf/structured-conf.d/
