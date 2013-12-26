@@ -1,5 +1,5 @@
 # ignore top-level folders during testing
-data
+/data
 debug
 docs
 
