@@ -13,7 +13,7 @@ REM change into app dir
 cd htdocs
 
 REM run php dev server on named port, enable debug settings for php (not in production php.ini)
-php -S localhost:8081 -c ../conf/php.ini -d register_argc_argv=On app/console server:run
+php -S localhost:8097 -c ../conf/php.ini -d register_argc_argv=On app/console server:run
 
 pause
 

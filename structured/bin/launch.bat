@@ -10,7 +10,7 @@ REM setup php path
 set PATH=%PATH%;%cwd%\vendor\php
 
 REM setup dynamic vars
-set port=8080
+set port=8097
 
 REM wipe and old instance of dynamic files
 type conf\template.httpd.conf|bin\repl.bat "80" "%port%" > conf\httpd.conf
