@@ -6,8 +6,8 @@ cd ..
 REM capture the full path of current directory
 set cwd=%CD%
 
-REM setup php path
-set PATH=%PATH%;%cwd%\vendor\php
+REM setup path to include PHP and Symfony commands (inc phpunit)
+set PATH=%PATH%;%cwd%\vendor\php;%cwd%\htdocs\bin
 
 REM this does work
 set PHPRC=%cwd%\conf
