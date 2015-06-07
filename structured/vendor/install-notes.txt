@@ -1,5 +1,6 @@
 Apache 2.4
 PHP 5.6.1
+XDebug PHP 5.6 VC11 TS
 
 no more PEAR; phpunit done via composer (php bin/composer.phar)
 composer used for installing and upgrading Symfony core
