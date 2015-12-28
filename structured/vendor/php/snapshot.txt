@@ -1,7 +1,7 @@
 This snapshot was automatically generated on
-Thu, 25 Sep 2014 02:18:21 +0000
+Thu, 26 Nov 2015 03:17:03 +0000
 
-Version: 5.6.1
+Version: 5.6.16
 Branch: HEAD
 Build: C:\php-sdk\php56\vc11\x86\obj\Release_TS
 
@@ -77,8 +77,8 @@ Module: php_com_dotnet.dll
 Module: php_curl.dll
 ===========================
 	libeay32.dll
-	ssleay32.dll
 	libssh2.dll
+	ssleay32.dll
 	normaliz.dll
 	msvcr110.dll
 
@@ -113,9 +113,9 @@ Module: php_interbase.dll
 
 Module: php_intl.dll
 ===========================
-	icuuc53.dll
-	icuin53.dll
-	icuio53.dll
+	icuuc54.dll
+	icuin54.dll
+	icuio54.dll
 	msvcr110.dll
 	msvcp110.dll
 
