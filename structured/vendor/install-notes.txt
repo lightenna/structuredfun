@@ -5,3 +5,7 @@ XDebug PHP 5.6 VC11 TS
 no more PEAR; phpunit done via composer (php bin/composer.phar)
 composer used for installing and upgrading Symfony core
 no more Zend Optimizer+; included in PHP 5.5+
+
+File variations from zips
+vendor/php contains custom php.ini (used for CLI test suite)
+vendor/php/ext contains php_xdebug-2.3.2-5.6-vc11
