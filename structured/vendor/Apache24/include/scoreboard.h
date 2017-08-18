@@ -26,7 +26,7 @@
 extern "C" {
 #endif
 
-#ifdef HAVE_SYS_TIMES_H
+#if APR_HAVE_SYS_TIME_H
 #include <sys/time.h>
 #include <sys/times.h>
 #endif
@@ -115,6 +115,7 @@ struct worker_score {
     char client[32];            /* Keep 'em small... */
     char request[64];           /* We just want an idea... */
     char vhost[32];             /* What virtual host is being accessed? */
+    char protocol[16];          /* What protocol is used on the connection? */
 };
 
 typedef struct {
@@ -142,6 +143,7 @@ struct process_score {
     apr_uint32_t lingering_close;   /* async connections in lingering close */
     apr_uint32_t keep_alive;        /* async connections in keep alive */
     apr_uint32_t suspended;         /* connections suspended by some module */
+    int bucket;             /* Listener bucket used by this child */
 };
 
 /* Scoreboard is now in 'local' memory, since it isn't updated once created,
@@ -180,11 +182,32 @@ AP_DECLARE(int) ap_update_child_status(ap_sb_handle_t *sbh, int status, request_
 AP_DECLARE(int) ap_update_child_status_from_indexes(int child_num, int thread_num,
                                                     int status, request_rec *r);
 AP_DECLARE(int) ap_update_child_status_from_conn(ap_sb_handle_t *sbh, int status, conn_rec *c);
+AP_DECLARE(int) ap_update_child_status_from_server(ap_sb_handle_t *sbh, int status, 
+                                                   conn_rec *c, server_rec *s);
+AP_DECLARE(int) ap_update_child_status_descr(ap_sb_handle_t *sbh, int status, const char *descr);
+
 AP_DECLARE(void) ap_time_process_request(ap_sb_handle_t *sbh, int status);
 
 AP_DECLARE(worker_score *) ap_get_scoreboard_worker(ap_sb_handle_t *sbh);
+
+/** Return a pointer to the worker_score for a given child, thread pair.
+ * @param child_num The child number.
+ * @param thread_num The thread number.
+ * @return A pointer to the worker_score structure.
+ * @deprecated This function is deprecated, use ap_copy_scoreboard_worker instead. */
 AP_DECLARE(worker_score *) ap_get_scoreboard_worker_from_indexes(int child_num,
                                                                 int thread_num);
+
+/** Copy the contents of a worker scoreboard entry.  The contents of
+ * the worker_score structure are copied verbatim into the dest
+ * structure.
+ * @param dest Output parameter.
+ * @param child_num The child number.
+ * @param thread_num The thread number.
+ */
+AP_DECLARE(void) ap_copy_scoreboard_worker(worker_score *dest,
+                                           int child_num, int thread_num);
+
 AP_DECLARE(process_score *) ap_get_scoreboard_process(int x);
 AP_DECLARE(global_score *) ap_get_scoreboard_global(void);
 

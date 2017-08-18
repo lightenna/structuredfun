@@ -50,7 +50,7 @@ enum cmd_how {
     RAW_ARGS,           /**< cmd_func parses command line itself */
     TAKE1,              /**< one argument only */
     TAKE2,              /**< two arguments only */
-    ITERATE,            /**< one argument, occuring multiple times
+    ITERATE,            /**< one argument, occurring multiple times
                          * (e.g., IndexIgnore)
                          */
     ITERATE2,           /**< two arguments, 2nd occurs multiple times
@@ -197,7 +197,7 @@ typedef const char *(*cmd_func) ();
 #endif /* AP_HAVE_DESIGNATED_INITIALIZER */
 
 /**
- * The command record structure.  Each modules can define a table of these
+ * The command record structure.  Modules can define a table of these
  * to define the directives it will implement.
  */
 typedef struct command_struct command_rec;
@@ -410,6 +410,23 @@ struct module_struct {
 };
 
 /**
+ * The AP_MAYBE_UNUSED macro is used for variable declarations that
+ * might potentially exhibit "unused var" warnings on some compilers if
+ * left untreated.
+ * Since static intializers are not part of the C language (C89), making
+ * (void) usage is not possible. However many compiler have proprietary 
+ * mechanism to suppress those warnings.  
+ */
+#ifdef AP_MAYBE_UNUSED
+#elif defined(__GNUC__)
+# define AP_MAYBE_UNUSED(x) x __attribute__((unused)) 
+#elif defined(__LCLINT__)
+# define AP_MAYBE_UNUSED(x) /*@unused@*/ x  
+#else
+# define AP_MAYBE_UNUSED(x) x
+#endif
+    
+/**
  * The APLOG_USE_MODULE macro is used choose which module a file belongs to.
  * This is necessary to allow per-module loglevel configuration.
  *
@@ -424,7 +441,7 @@ struct module_struct {
  */
 #define APLOG_USE_MODULE(foo) \
     extern module AP_MODULE_DECLARE_DATA foo##_module;                  \
-    static int * const aplog_module_index = &(foo##_module.module_index)
+    AP_MAYBE_UNUSED(static int * const aplog_module_index) = &(foo##_module.module_index)
 
 /**
  * AP_DECLARE_MODULE is a convenience macro that combines a call of
@@ -492,7 +509,7 @@ AP_DECLARE(void *) ap_get_module_config(const ap_conf_vector_t *cv,
                                         const module *m);
 
 /**
- * Generic accessors for other modules to set at their own module-specific
+ * Generic accessors for other modules to set their own module-specific
  * data
  * @param cv The vector in which the modules configuration is stored.
  *        usually r->per_dir_config or s->module_config
@@ -812,7 +829,7 @@ AP_DECLARE(apr_status_t) ap_cfg_getc(char *ch, ap_configfile_t *cfp);
 /**
  * Detach from open ap_configfile_t, calling the close handler
  * @param cfp The file to close
- * @return 1 on sucess, 0 on failure
+ * @return 1 on success, 0 on failure
  */
 AP_DECLARE(int) ap_cfg_closefile(ap_configfile_t *cfp);
 
@@ -1320,6 +1337,31 @@ AP_DECLARE_HOOK(int,quick_handler,(request_rec *r, int lookup_uri))
  * be registered during the hook registration phase.
  */
 AP_DECLARE_HOOK(void,optional_fn_retrieve,(void))
+
+/**
+ * Allow modules to open htaccess files or perform operations before doing so
+ * @param r The current request
+ * @param dir_name The directory for which the htaccess file should be opened
+ * @param access_name The filename  for which the htaccess file should be opened
+ * @param conffile Where the pointer to the opened ap_configfile_t must be
+ *        stored
+ * @param full_name Where the full file name of the htaccess file must be
+ *        stored.
+ * @return APR_SUCCESS on success,
+ *         APR_ENOENT or APR_ENOTDIR if no htaccess file exists,
+ *         AP_DECLINED to let later modules do the opening,
+ *         any other error code on error.
+ */
+AP_DECLARE_HOOK(apr_status_t,open_htaccess,
+                (request_rec *r, const char *dir_name, const char *access_name,
+                 ap_configfile_t **conffile, const char **full_name))
+
+/**
+ * Core internal function, use ap_run_open_htaccess() instead.
+ */
+apr_status_t ap_open_htaccess(request_rec *r, const char *dir_name,
+        const char *access_name, ap_configfile_t **conffile,
+        const char **full_name);
 
 /**
  * A generic pool cleanup that will reset a pointer to NULL. For use with
